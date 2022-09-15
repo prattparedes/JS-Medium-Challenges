@@ -41,5 +41,45 @@ console.log(arrSum([0, 10, 20, 3, 1.2]))
 
 function sumaProgresiva(num1) {
     let sum = 0
-    for (let i = 0; i )
+    for (let i = 0; i <= num1; i++) {
+        sum = sum + i
+    }
+    return sum
 }
+
+console.log(sumaProgresiva(600))
+
+// Calcular tiempo, Dar un numero en segundos y devolverlo en mm:ss format
+
+function calcTime(num1) {
+    sec = num1 % 60
+    min = ((num1 - sec) / 60)
+
+    if (min.toString().length === 1) {
+        min = '0' + min
+    }
+
+    if (sec.toString().length === 1) {
+        sec = '0' + sec
+    }
+
+    return `${min}:${sec}`
+}
+
+console.log(calcTime(590))
+
+// Encuentra el mayor número dentro de un array
+
+function getMax(arr) {
+    let max = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
+    }
+    return max
+}
+
+console.log(getMax([-50, -80, -10]))
+
+// Reverse a string
