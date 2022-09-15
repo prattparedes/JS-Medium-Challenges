@@ -82,4 +82,36 @@ function getMax(arr) {
 
 console.log(getMax([-50, -80, -10]))
 
-// Reverse a string
+// Reverse a string (3 métodos)
+
+//Metodo loop for positivo
+
+
+function reverseString1(str) {
+    newstr = ''
+    for (let i = 0; i < str.length; i++) {
+        newstr = str[i] + newstr
+    }
+    return newstr
+}
+
+console.log(reverseString1('Hola Mundo'))
+
+// Metodo loop negativo
+function reverseString2(str) {
+    newstr = ''
+    for (let i = str.length - 1; i >= 0; i--) {
+        newstr = newstr + str[i]
+    }
+    return newstr
+}
+
+console.log(reverseString2('Thomas'))
+
+//Método array reverse .spli(''), reverse(), join('')
+function reverseString3 (str) {
+    return newstr = str.split('').reverse().join('')
+}
+
+console.log(reverseString3('Frontend is the Best'))
+
